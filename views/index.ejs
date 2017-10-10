@@ -14,10 +14,13 @@
         </tr>
       </thead>
       <tbody>
-
-        <!-- INSERT RENDERED DATA HERE -->
-        
-
+        <% for (var i = 0; i < pokemon.length; i++) { %>
+        <tr>
+          <td><img src=<%= pokemon[i].image_url %>></td>
+          <td><%= pokemon[i].name %></td>
+          <td><a href=pokemon/<%=pokemon[i].id%>><%= pokemon[i].id %></a></td>
+        </tr>
+        <% } %>
       </tbody>
     </table>
   </body>
